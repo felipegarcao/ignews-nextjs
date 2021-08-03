@@ -11,6 +11,7 @@
 
   display: flex;
   align-items: center;
+  
 
   nav {
     margin-left: 5rem;
@@ -51,4 +52,9 @@
       }
     }
   }
+
+  > button {
+    margin-left: auto;
+  }
+  
 }
