@@ -19,7 +19,7 @@ export default function Post({ post }: PostProps) {
   return (
     <>
       <Head>
-        <title>{post.title.length < 40 ? post.title : post.title.substring(0,50)+'...' } | IgNews</title>
+        <title>{post.title.length < 40 ? post.title : post.title.substring(0,40)+'...' } | IgNews</title>
       </Head>
 
       <main className={styles.container}>
@@ -40,10 +40,15 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
   const session = await getSession({ req })
   const { slug } = params;
 
-  // if (!session){
-
-  // }
-
+  if (!session.activeSubscription) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      }
+    }
+  }
+  
   const prismic = getPrismicClient(req)
 
   const response = await prismic.getByUID('publication', String(slug), {})
