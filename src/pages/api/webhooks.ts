@@ -16,7 +16,7 @@ async function buffer(readable: Readable) {
 
 export const config = {
   api: {
-    bodyParser: false, // desabiltando o entendimento padrão do Next
+    bodyParser: false, // desabilitando o entendimento padrão do Next
   },
 };
 
