@@ -25,4 +25,4 @@ export function Header(){
 }
 
 // a Props Prefetch Colocada no Component de Link, Serve, Pra na hora que nossa pagina for carregada inicialmente, ele vai carregar
-// o link que possui o prefetch junto, quando o usuario for acessar a pagina que esta recebendo o prefetch, ela ja estara carregada
+// o link que possui o prefetch junto, quando o usuário for acessar a pagina que esta recebendo o prefetch, ela ja estará carregada
