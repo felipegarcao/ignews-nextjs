@@ -30,7 +30,7 @@ export function SubscribeButton(){
       await stripe.redirectToCheckout({ sessionId })
 
     } catch(err) {
-      alert('VAI SE FUDER MANO');
+      alert(err.message);
     }
 
   }
