@@ -60,7 +60,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
     updatedAt: new Date(response.last_publication_date).toLocaleDateString('pt-BR', {
       day: '2-digit',
       month: 'long', // Mes Escrito por Inteiro
-      year: 'numeric' // modo Numerico
+      year: 'numeric' // modo Numérico
     })
   }
 

@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { useSession } from "next-auth/client";
 import { useRouter } from 'next/router';
 
-interface PostPrevieProps {
+interface PostPreviewProps {
   post: {
     slug: string;
     title: string;
@@ -18,7 +18,7 @@ interface PostPrevieProps {
 }
 
 
-export default function PostPreview({ post }: PostPrevieProps) {
+export default function PostPreview({ post }: PostPreviewProps) {
   const [session] = useSession();
   const router = useRouter()
 
